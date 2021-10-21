@@ -4,7 +4,6 @@ const quoteText = document.querySelector("#quote");
 const authorText = document.querySelector(".author");
 const newQuoteBtn = document.querySelector("#new-quote");
 const tweetQuoteBtn = document.querySelector(".twitter-button");
-const quotes = document.querySelector("#quotes");
 const loader = document.querySelector(".loader");
 
 const randomIndex = (length) => {
@@ -17,7 +16,7 @@ const updateUI = (data) => {
 
   quoteText.textContent = text;
   authorText.textContent = author || "Unknown";
-  quotes.innerText = `Total of ${data.length} quotes available`;
+
   if (text.length > 70) {
     quoteText.classList.add("long-quote");
   } else {
